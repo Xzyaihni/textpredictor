@@ -56,7 +56,7 @@ impl Predictor
 {
     pub fn word_split<'a>(text: &'a String) -> impl Iterator<Item=&'a str> + Clone
     {
-        text.split(&[' ', '\n', ',', '.', ':']).filter(|v| v.len()!=0)
+        text.split(&[' ', '\n', ',', '.']).filter(|v| v.len()!=0)
     }
 
     pub fn create<'a>(words: impl Iterator<Item=&'a str> + Clone) -> Self
